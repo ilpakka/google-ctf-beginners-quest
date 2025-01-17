@@ -112,7 +112,7 @@ python rsatool.py -f PEM -o key-recovered.pem -n <decimal n> -d <decimal d>
 Let's use our reconstructed RSA private key to decrypt `encrypted.txt`. The challenge description already has the command for us to use.
 
 ```bash
-openssl pkeyutl -decrypt -inkey key_recovered.pem -in encrypted.txt -out plaintext.txt
+openssl pkeyutl -decrypt -inkey key-recovered.pem -in encrypted.txt -out plaintext.txt
 ```
 
 The flag is now readable in `plaintext.txt`.
